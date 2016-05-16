@@ -15,7 +15,8 @@
   },
   "scripts": {
     "cover": "istanbul cover node_modules/tape/bin/tape build/test/**/*.spec.js",
-    "pretest": "typings i && tsc",
+    "pretest": "tsc",
+    "prepublish": "typings i",
     "test": "tape build/test/**/*.spec.js | tap-spec",
     "tslint": "tslint index.ts ./test/**/.ts ./src/**/*.ts"
   },
