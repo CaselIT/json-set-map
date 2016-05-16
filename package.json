@@ -1,0 +1,49 @@
+{
+  "name": "json-set-map",
+  "version": "1.0.0",
+  "description": "Set and map classes extended with the methods toJSON and a static fromJSON",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "istanbul": "^0.4.3",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1",
+    "tslint": "^3.10.2",
+    "typescript": "^1.8.10"
+  },
+  "scripts": {
+    "cover": "istanbul cover node_modules/tape/bin/tape build/test/**/*.spec.js",
+    "prepublish": "tsc",
+    "pretest": "tsc",
+    "test": "tape build/test/**/*.spec.js | tap-spec",
+    "tslint": "tslint index.ts ./test/**/.ts ./src/**/*.ts"
+  },
+  "author": "Federico Caselli",
+  "license": "MIT",
+  "keywords": [
+    "Set",
+    "Map",
+    "ES6",
+    "toJSON",
+    "fromJSON",
+    "JSON",
+    "serialize",
+    "deserialize",
+    "serialization",
+    "deserialization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CaselIT/jsoon-set-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CaselIT/jsoon-set-map/issues"
+  },
+  "files": [
+    "build/index*",
+    "build/src/**/*",
+    "LICENSE",
+    "README.md"
+  ]
+}
