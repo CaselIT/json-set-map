@@ -47,5 +47,8 @@
     "LICENSE",
     "README.md",
     "typings.json"
-  ]
+  ],
+  "engines": {
+    "node": ">=5.x"
+  }
 }
