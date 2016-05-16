@@ -11,7 +11,7 @@
     },
     "files": [
         "index.ts",
-        "typings/main.d.ts",
+        "typings/index.d.ts",
         "test/map.spec.ts",
         "test/set.spec.ts"
     ]
