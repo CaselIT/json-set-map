@@ -1,7 +1,7 @@
 # jsoon-set-map
-`Set` and `Map` classes extended with the methods `toJSON` and a static `fromJSON`.
+`Set` and `Map` classes extended with the method `toJSON` and a static `fromJSON`.
 
-The original `Set` and `Map` object are not modified, but extendend with a subclass.
+The original `Set` and `Map` object are not modified, so can still be used.
 
 This library does not provides pilifills for Set and Map.
 
@@ -58,7 +58,7 @@ Called automaticly by `JSON.stringify`
 ```
 
 ### Method `fromJSON`
-Static method useful to load a `Set` or `Map` from the object returned by `JSON.parse`
+Static method useful to load a `Set` or `Map` from the object returned by `JSON.parse`. A parser function can be used to load the objects of the array as shown in the example below. 
 ```
 > import { Set, Map } from 'json-set-map'
 
@@ -82,7 +82,8 @@ Static method useful to load a `Set` or `Map` from the object returned by `JSON.
 < SerializableMap { 'KEY' => 'value' }
 ```
 
+See the JSDoc on the files for mode details.
 
 
-## TODO
+### TODO
 * Add support for `node v4.x`
