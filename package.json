@@ -6,6 +6,7 @@
   "typings": "build/index.d.ts",
   "dependencies": {},
   "devDependencies": {
+    "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1",
@@ -15,6 +16,7 @@
   },
   "scripts": {
     "cover": "istanbul cover node_modules/tape/bin/tape build/test/**/*.spec.js",
+    "coveralls": "npm run cover -- --report lcovonly | tap-spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "pretest": "tsc",
     "test": "tape build/test/**/*.spec.js | tap-spec",
     "tslint": "tslint index.ts ./test/**/.ts ./src/**/*.ts",
