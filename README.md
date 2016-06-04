@@ -12,7 +12,7 @@ This library does not provides pilifills for Set and Map.
 ```sh
 npm i json-set-map
 ```
-The current version supports only `node v6.x` and `node v5.x`
+The current version supports `node v6.x` and `v5.x`. Tested on browsers `Chrome v52`, `Firefox v47` and `Edge v38`
 
 ## Usage
 * Typescript and es6
