@@ -1,7 +1,7 @@
 [![NPM version](https://img.shields.io/npm/v/json-set-map.svg?style=flat)](https://www.npmjs.com/package/json-set-map)
-[![Build Status](https://travis-ci.org/CaselIT/jsoon-set-map.svg?branch=master)](https://travis-ci.org/CaselIT/jsoon-set-map)
-[![Coverage Status](https://coveralls.io/repos/github/CaselIT/jsoon-set-map/badge.svg?branch=master)](https://coveralls.io/github/CaselIT/jsoon-set-map?branch=master)
-# jsoon-set-map
+[![Build Status](https://travis-ci.org/CaselIT/json-set-map.svg?branch=master)](https://travis-ci.org/CaselIT/json-set-map)
+[![Coverage Status](https://coveralls.io/repos/github/CaselIT/json-set-map/badge.svg?branch=master)](https://coveralls.io/github/CaselIT/json-set-map?branch=master)
+# json-set-map
 `Set` and `Map` classes extended with the method `toJSON` and a static `fromJSON`.
 
 The original `Set` and `Map` object are not modified, so can still be used.

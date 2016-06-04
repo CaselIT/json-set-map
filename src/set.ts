@@ -10,7 +10,7 @@ export default class SerializableSet<T> extends Set<T> {
     return [...this.values()];
   }
   /**
-   * Creates a new set instance the array returned by JSON.parse. 
+   * Creates a new set instance from the array returned by JSON.parse. 
    * If no parser is specified, this method returns `new SerializableSet<T>(iterable)`
    * @param {any[]} iterable The array of elements.
    * @param {(item: any) => T} [options.parser] Function to use as parser for the objects.

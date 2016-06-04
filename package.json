@@ -12,7 +12,7 @@
     "tape": "^4.5.1",
     "tslint": "^3.10.2",
     "typescript": "^1.8.10",
-    "typings": "^1.0.2"
+    "typings": "^1.0.4"
   },
   "scripts": {
     "cover": "istanbul cover node_modules/tape/bin/tape build/test/**/*.spec.js",
@@ -38,10 +38,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/CaselIT/jsoon-set-map.git"
+    "url": "https://github.com/CaselIT/json-set-map.git"
   },
   "bugs": {
-    "url": "https://github.com/CaselIT/jsoon-set-map/issues"
+    "url": "https://github.com/CaselIT/json-set-map/issues"
   },
   "files": [
     "build/index*",
