@@ -1,6 +1,6 @@
 {
   "name": "json-set-map",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set and map classes extended with the methods toJSON and a static fromJSON",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
