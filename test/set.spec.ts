@@ -34,7 +34,7 @@ test('Set tests', t => {
       }
       sst.end();
     });
-    st.test('Use keyParser', sst => {
+    st.test('Use parser', sst => {
       const items: number[] = [1, 2, 3, 4];
       sst.plan(3 + 2 * items.length);
       const set = SerializableSet.fromJSON<KeyTest>(items, { parser: keyParser });
