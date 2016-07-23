@@ -16,15 +16,18 @@ The current version supports `node v6.x` and `v5.x`. Tested on browsers `Chrome 
 
 ## Usage
 * Typescript and es6
+
 ```ts
 import { Set, Map } from 'json-set-map'
 ```
 * Nodejs
+
 ```js
 var Set = require('json-set-map').Set;
 var Map = require('json-set-map').Map;
 ```
 The unmodified Set and Map class can still be used:
+
 ```ts
 import { Set as jSet, Map as jMap } from 'json-set-map'
 let originalMap = new Map()
