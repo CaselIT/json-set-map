@@ -22,10 +22,9 @@ export default class SerializableMap<K, V> extends Map<K, V> {
     if (!options.keyParser && !options.valueParser)
       return new SerializableMap<K, V>(iterable);
     const map = new SerializableMap<K, V>();
-    const hasKeyParser = !!options.keyParser, hasValueParser = !!options.valueParser;
     for (let item of iterable)
-      map.set(hasKeyParser ? options.keyParser(item[0]) : item[0],
-        hasValueParser ? options.valueParser(item[1]) : item[1]);
+      map.set(options.keyParser ? options.keyParser(item[0]) : item[0],
+        options.valueParser ? options.valueParser(item[1]) : item[1]);
     return map;
   }
 }

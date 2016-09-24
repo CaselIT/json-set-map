@@ -12,7 +12,7 @@ This library does not provides pilifills for Set and Map.
 ```sh
 npm i json-set-map
 ```
-The current version supports `node v6.x` and `v5.x`. Tested on browsers `Chrome v52`, `Firefox v47` and `Edge v38`
+The current version supports `node v6.x` and `v5.x`. Tested on browsers `Chrome v52+`, `Firefox v47+` and `Edge v38+`
 
 ## Usage
 * Typescript and es6
@@ -32,8 +32,8 @@ The unmodified Set and Map class can still be used:
 import { Set as jSet, Map as jMap } from 'json-set-map'
 let originalMap = new Map()
 let originalSet = new Set()
-let mapSubclass = new jMap()
-let setSubclass = new jSet()
+let serializableMap = new jMap()
+let serializableSet = new jSet()
 ```
 
 ## API
@@ -47,9 +47,9 @@ Called automaticly by `JSON.stringify`
 < Set { 1, 2 }
 > JSON.stringify(originalSet)
 < '{}'
-> setSubclass.add(1).add(2)
+> serializableSet.add(1).add(2)
 < SerializableSet { 1, 2 }
-> JSON.stringify(setSubclass)
+> JSON.stringify(serializableSet)
 < '[1,2]'
 
 // Map
@@ -57,9 +57,9 @@ Called automaticly by `JSON.stringify`
 < Map { 1 => 2, 3 => 4 }
 > JSON.stringify(originalMap)
 < '{}'
-> mapSubclass.add(1).add(2)
+> serializableMap.add(1).add(2)
 < SerializableMap { 1 => 2, 3 => 4 }
-> JSON.stringify(mapSubclass)
+> JSON.stringify(serializableMap)
 < '[[1,2],[3,4]]'
 ```
 
@@ -88,7 +88,15 @@ Static method useful to load a `Set` or `Map` from the object returned by `JSON.
 < SerializableMap { 'KEY' => 'value' }
 ```
 
-See the JSDoc on the files for mode details.
+Refer to the JSDoc documentation on the files for mode details.
+
+#### Node
+JSON does not support `undefined` and is replaced with `null`. This prevents the correct deserialization of a Set with both `undefined` and `null` as element or of a Map with both element as key. 
+
+```ts
+const str = JSON.stringify(new jSet().add(null).add(undefined)) // => '[null,null]'
+jSet.fromJSON(JSON.parse(str))                                  // => SerializableSet { null }
+```
 
 
 ### TODO

@@ -1,23 +1,23 @@
 {
   "name": "json-set-map",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Set and map classes extended with the methods toJSON and a static fromJSON",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "dependencies": {},
   "devDependencies": {
-    "browserify": "^13.0.1",
-    "coveralls": "^2.11.9",
-    "istanbul": "^0.4.3",
+    "browserify": "^13.1.0",
+    "coveralls": "^2.11.14",
+    "istanbul": "^0.4.5",
     "tap-spec": "^4.1.1",
-    "tape": "^4.5.1",
-    "tslint": "^3.10.2",
-    "typescript": "^1.8.10",
-    "typings": "^1.0.4"
+    "tape": "^4.6.0",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0"
   },
   "scripts": {
     "prebrowserify": "tsc",
-    "browserify": "browserify build/test/map.spec.js build/test/set.spec.js > test_bundle.js",
+    "browserify": "browserify build/test/map.spec.js build/test/set.spec.js > ./test/test_bundle.js",
     "cover": "istanbul cover node_modules/tape/bin/tape build/test/**/*.spec.js",
     "coveralls": "npm run cover -- --report lcovonly | tap-spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "pretest": "tsc",

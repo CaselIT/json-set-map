@@ -7,7 +7,12 @@
         "noImplicitAny": true,
         "outDir": "./build",
         "sourceMap": true,
-        "target": "es6"
+        "target": "es6",
+        "noImplicitThis": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "strictNullChecks": true
     },
     "files": [
         "index.ts",
