@@ -3,7 +3,7 @@ import { Parser } from './utils';
 /** Extends Map to add toJSON and fromJSON */
 export default class SerializableMap<K, V> extends Map<K, V> {
   /**
-   * Called automaticly by JSON.stringify
+   * Called automatically by JSON.stringify
    * @return {[K, V][]} An array of two elements tuple.
    */
   toJSON(): [K, V][] {

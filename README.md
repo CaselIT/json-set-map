@@ -12,7 +12,7 @@ This library does not provides polyfills for Set and Map.
 ```sh
 yarn add json-set-map
 ```
-The current version supports `node v6.x+` and modern browsers.
+The current version supports `node v10.x+` and modern browsers.
 
 ## Usage
 * Typescript and es6

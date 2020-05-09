@@ -3,7 +3,7 @@ import { Parser } from './utils';
 /** Extends Set to add toJSON and fromJSON */
 export default class SerializableSet<T> extends Set<T> {
   /**
-   * Called automaticly by JSON.stringify
+   * Called automatically by JSON.stringify
    * @return {T[]} An array of elements.
    */
   toJSON(): T[] {
