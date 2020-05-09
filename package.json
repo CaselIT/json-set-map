@@ -1,6 +1,6 @@
 {
   "name": "json-set-map",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Set and map extension that support JSON serialization and de-serialization",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
@@ -21,6 +21,7 @@
     "browser": "browserify build/test/map.spec.js build/test/set.spec.js > test/test_bundle.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "pretest": "tsc",
+    "prepublish": "tsc",
     "test": "tape build/test/**/*.spec.js | tap-spec",
     "test-cover": "nyc tape build/test/**/*.spec.js | tap-nyc",
     "tslint": "tslint index.ts ./test/**/.ts ./src/**/*.ts"
