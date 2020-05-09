@@ -10,7 +10,7 @@ export default class SerializableMap<K, V> extends Map<K, V> {
     return [...this.entries()];
   }
   /**
-   * Creates a new map instance from the array of tuple returned by JSON.parse. 
+   * Creates a new map instance from the array of tuple returned by JSON.parse.
    * If no parser is specified, this method returns `new SerializableMap<K, V>(iterable)`
    * @param {any[]} iterable The array of tuples.
    * @param {(item: any) => K} [options.keyParser] Function to use as parser for the key objects.

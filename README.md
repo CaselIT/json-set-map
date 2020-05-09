@@ -2,17 +2,17 @@
 [![Build Status](https://travis-ci.org/CaselIT/json-set-map.svg?branch=master)](https://travis-ci.org/CaselIT/json-set-map)
 [![Coverage Status](https://coveralls.io/repos/github/CaselIT/json-set-map/badge.svg?branch=master)](https://coveralls.io/github/CaselIT/json-set-map?branch=master)
 # json-set-map
-`Set` and `Map` classes extended with the method `toJSON` and a static `fromJSON`.
+`Set` and `Map` extension that support JSON serialization and de-serialization
 
 The original `Set` and `Map` object are not modified, so can still be used.
 
-This library does not provides pilifills for Set and Map.
+This library does not provides polyfills for Set and Map.
 
 ## Install
 ```sh
-npm i json-set-map
+yarn add json-set-map
 ```
-The current version supports `node v6.x` and `v5.x`. Tested on browsers `Chrome v52+`, `Firefox v47+` and `Edge v38+`
+The current version supports `node v6.x+` and modern browsers.
 
 ## Usage
 * Typescript and es6
@@ -91,13 +91,9 @@ Static method useful to load a `Set` or `Map` from the object returned by `JSON.
 Refer to the JSDoc documentation on the files for mode details.
 
 #### Node
-JSON does not support `undefined` and is replaced with `null`. This prevents the correct deserialization of a Set with both `undefined` and `null` as element or of a Map with both element as key. 
+JSON does not support `undefined` and is replaced with `null`. This prevents the correct de-serialization of a Set with both `undefined` and `null` as element or of a Map with both element as key. 
 
 ```ts
 const str = JSON.stringify(new jSet().add(null).add(undefined)) // => '[null,null]'
 jSet.fromJSON(JSON.parse(str))                                  // => SerializableSet { null }
 ```
-
-
-### TODO
-* Add support for `node v4.x`

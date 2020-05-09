@@ -12,11 +12,11 @@
         "noUnusedParameters": true,
         "noUnusedLocals": true,
         "noImplicitReturns": true,
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "strict": true
     },
     "files": [
         "index.ts",
-        "typings/index.d.ts",
         "test/map.spec.ts",
         "test/set.spec.ts"
     ]

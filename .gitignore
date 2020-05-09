@@ -3,3 +3,5 @@ build
 coverage
 typings
 test_bundle.js
+.nyc_output
+*.log
